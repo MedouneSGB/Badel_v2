@@ -202,6 +202,9 @@
                     String formIn27 = "";
                     String formIn28 = "";
                     String formIn29 = "";
+                    String formIn30 = "";
+                    String formIn31 = "";
+                    String formIn32 = "";
 
                     try {
 
@@ -241,6 +244,9 @@
                             formIn27 = rs1.getString(27);
                             formIn28 = rs1.getString(28);
                             formIn29 = rs1.getString(29);
+                            formIn30 = rs1.getString(30);
+                            formIn31 = rs1.getString(31);
+                            formIn32 = rs1.getString(32);
                             remplir = " Modifier ";
                         }
                     } catch (SQLException ex) {
@@ -282,8 +288,8 @@
                     /* Récupération des données de p3demandind */
                     //int compte1 = 1;
                     String form3In1 = "";
-                 //   String form3In2 = "";
-                  //  String form3In3 = "";
+                    String form3In2 = "";
+                    String form3In3 = "";
                     String form3In4 = "";
                     String form3In5 = "";
                     String form3In6 = "";
@@ -307,8 +313,8 @@
                         while (rs1.next()) {
 
                             form3In1 = rs1.getString(1);
-                        //  form3In2 = rs1.getString(2);
-                         // form3In3 = rs1.getString(3);
+                            form3In2 = rs1.getString(2);
+                            form3In3 = rs1.getString(3);
                             form3In4 = rs1.getString(4);
                             form3In5 = rs1.getString(5);
                             form3In6 = rs1.getString(6);
@@ -320,7 +326,7 @@
                             form3In12 = rs1.getString(12);
                             form3In13 = rs1.getString(13);
                             form3In14 = rs1.getString(14);
-                            form3In15 = rs1.getString(15);
+                            //form3In15 = rs1.getString(15);
                             remplir3 = " Modifier ";
                             location3 = "updateInd3";
 
@@ -383,8 +389,8 @@
                                                 <tbody>
 
                                                     <tr>
-                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir%>" onclick="location.href = 'updateInd1.jsp?formulaire_id=<%=formIn2%>&id=<%=idx%>&form=p1ind'"/><input style="background-color: red; color: white" type="button" value="  Effacer " onclick="location.href ='delete.jsp?formulaire_id=<%=formIn2%>&id=<%=idx%>&table=p1demandeurindividuel'"/></td>
-                                                        <td><%=formIn29%></td>                                                        
+                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir%>" onclick="location.href = 'updateInd1.jsp?formulaire_id=<%=formIn3%>&id=<%=idx%>&form=p1ind'"/><input style="background-color: red; color: white" type="button" value="  Effacer " onclick="location.href ='delete.jsp?formulaire_id=<%=formIn3%>&id=<%=idx%>&table=p1demandeurindividuel'"/></td>
+                                                                                                           
                                                         <td><%=formIn2%></td>
                                                         <td><%=formIn3%></td>
                                                         <td><%=formIn4%></td>
@@ -412,6 +418,10 @@
                                                         <td><%=formIn26%></td>
                                                         <td><%=formIn27%></td>
                                                         <td><%=formIn28%></td>
+                                                        <td><%=formIn29%></td>  
+                                                        <td><%=formIn30%></td>  
+                                                        <td><%=formIn31%></td>  
+                                                        <td><%=formIn32%></td>   
                                                     </tr>
 
                                                 </tbody>
@@ -444,7 +454,7 @@
                                                 <tbody>
 
                                                     <tr>
-                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir2%>" onclick="location.href = '<%=location2%>.jsp?formulaire_id=<%=formIn2%>&id=<%=idx%>&form=p2ind'"/></td>
+                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir2%>" onclick="location.href = '<%=location2%>.jsp?formulaire_id=<%=formIn3%>&id=<%=idx%>&form=p2ind'"/></td>
 
                                                         <td><%=form2In2%></td>
                                                         <td><%=form2In3%></td>
@@ -483,7 +493,7 @@
                                                         <th>Compte_Bancaire</th>
                                                         <th>Nom_Banque_ou_SFD</th>
                                                         <th>N°_Compte_Banque_ou_SFD</th>
-                                                        <th>Soutien_d'un_Parent</th>
+                                                        <th>Soutien_d'un_Partenaire</th>
                                                         <th>Ville_du_Parent</th>
                                                         <th>Pays_du_Parent</th>
                                                     </tr>
@@ -492,9 +502,9 @@
                                                 <tbody>
 
                                                     <tr>
-                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir3%>" onclick="location.href = '<%=location3%>.jsp?formulaire_id=<%=formIn2%>&id=<%=idx%>&form=p3ind'"/></td>
-                                                    <!--    <td><form3In2%></td>
-                                                        <td><form3In3%></td>   -->
+                                                        <td><input style="background-color: #09b83e; color: white" type="button" value="<%=remplir3%>" onclick="location.href = '<%=location3%>.jsp?formulaire_id=<%=formIn3%>&id=<%=idx%>&form=p3ind'"/></td>
+                                                        <td><%=form3In2%></td>
+                                                        <td><%=form3In3%></td>
                                                         <td><%=form3In4%></td>
                                                         <td><%=form3In5%></td>
                                                         <td><%=form3In6%></td>
@@ -506,7 +516,6 @@
                                                         <td><%=form3In12%></td>
                                                         <td><%=form3In13%></td>
                                                         <td><%=form3In14%></td>
-                                                        <td><%=form3In15%></td>
                                                     </tr>
 
                                                 </tbody>
